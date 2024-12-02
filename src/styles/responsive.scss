@@ -1,0 +1,109 @@
+@media screen and (max-width: 1200px) {
+  .bar-container {
+    padding-inline: 4rem;
+  }
+  .search-resto,
+  .favorite-header,
+  .search-header {
+    font-size: 4rem;
+  }
+  .menu,
+  .favorite {
+    margin: 4rem 8rem;
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+
+  .detail-container {
+    padding-inline: 10rem;
+  }
+
+  .favorite-container,
+  .search-home-container {
+    padding-inline: 0rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .jumbotron > .content {
+    margin-inline: 2rem;
+  }
+
+  .jumbotron > .content > h1 {
+    font-size: 3rem;
+  }
+
+  .jumbotron > .content > p {
+    font-size: 2rem;
+    line-height: 4rem;
+    width: 80%;
+  }
+
+  .brH1 {
+    display: block;
+  }
+
+  .break {
+    display: none;
+  }
+
+  .jumbotron > .content > .button {
+    font-size: 2rem;
+  }
+  .search-resto,
+  .favorite-header,
+  .search-header {
+    font-size: 3rem;
+  }
+  .menu,
+  .favorite {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .img-container > img {
+    border-radius: 0;
+    width: 100%;
+  }
+  .detail-container {
+    margin-block: 10rem 0;
+    padding-inline: 0;
+  }
+  .detail-container > .text-container {
+    padding-inline: 3rem;
+    margin-top: 0;
+  }
+  .description {
+    text-align: justify;
+    width: 100%;
+  }
+  .add-review-container {
+    margin-block: 0;
+    border: none;
+  }
+
+  .favorite-container,
+  .search-home-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 8rem;
+  }
+
+  .search-container,
+  #query {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  #drawer {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
