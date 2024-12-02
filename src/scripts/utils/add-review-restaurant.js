@@ -7,7 +7,7 @@ const addReview = async ({ url, name, review }) => {
 
   const customerReviews = await RestaurantDbSource.addReviewRestaurant(data);
   reviewContainer.innerHTML = customerReviews
-    .map((reviewData) => ReviewElement(reviewData))
+    .map((element) => ReviewElement(element))
     .join('');
 };
 

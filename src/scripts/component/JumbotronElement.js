@@ -5,7 +5,7 @@ class JumbotronElement extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <section id="jumbotron" class="jumbotron">
+      <section id="jumbotron" class="jumbotron lazyload">
         <div class="content">
           <h1>Selamat Datang <br class="brH1"/> di Hunger Apps</h1>
           <p>

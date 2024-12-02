@@ -27,6 +27,7 @@ Scenario('liking one restaurant', async ({ I }) => {
   );
 
   I.click(firstRestaurant);
+  I.wait(3);
 
   I.seeElement('#likeButton');
   I.click('#likeButton');
@@ -37,6 +38,43 @@ Scenario('liking one restaurant', async ({ I }) => {
   const likedRestaurantName = await I.grabTextFrom('.resto_item_name');
 
   assert.strictEqual(firstRestaurantName, likedRestaurantName);
+});
+
+Scenario('unliking one restaurant', async ({ I }) => {
+  I.see('Tidak ada restoran.', '.restaurant-not-found');
+
+  I.amOnPage('/');
+  I.wait(2);
+
+  I.seeElement('.resto_item_detail-button');
+
+  const firstRestaurant = locate('.resto_item_detail-button').first();
+  const firstRestaurantName = await I.grabTextFrom(
+    locate('.resto_item_name').first()
+  );
+
+  I.click(firstRestaurant);
+  I.wait(3);
+
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('.resto-item');
+
+  const likedRestaurantName = await I.grabTextFrom('.resto_item_name');
+  assert.strictEqual(firstRestaurantName, likedRestaurantName);
+
+  I.click('.resto_item_detail-button');
+  I.wait(3);
+
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+
+  const RestaurantEmpty = await I.grabTextFrom('.restaurant-not-found');
+  assert.strictEqual('Tidak ada restoran.', RestaurantEmpty);
 });
 
 Scenario('searching restaurants', async ({ I }) => {
@@ -64,6 +102,7 @@ Scenario('searching restaurants', async ({ I }) => {
 
   I.fillField('#query', searchQuery);
   I.pressKey('Enter');
+  I.waitForElement('.resto-item', 3);
 
   const visibleLikedRestaurants = await I.grabTextFrom('.resto_item_name');
   assert.strictEqual(visibleLikedRestaurants, firstRestaurantName);
@@ -80,14 +119,14 @@ Scenario('Add Review', async ({ I }) => {
   I.waitForElement('.add-review-container', 5);
   I.seeElement('.add-review-container');
 
-  const inputTextReview = 'Rekomendasi bintang 5';
-  const outputTextReview = 'Rekomendasi bintang 5';
+  const inputTextReview = 'Makanannya sangat enak!';
+  const outputTextReview = 'Makanannya sangat enak!';
   I.fillField('input', 'Dicoding');
   I.fillField('textarea', inputTextReview);
 
   I.click(locate('.submit-button'));
 
-  I.waitForElement('.review_item p', 5);
+  I.seeElement('.review_item p', 5);
   I.seeElement('.review_item p');
 
   const lastReviewText = await I.grabTextFrom(locate('.review_item p').last());

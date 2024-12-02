@@ -25,6 +25,11 @@
 }
 
 @media screen and (max-width: 700px) {
+  .jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('../public/images/heros/hero-image_2_mobile.png');
+  }
+
   .jumbotron > .content {
     margin-inline: 2rem;
   }

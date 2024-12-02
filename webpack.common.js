@@ -21,6 +21,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg|jpeg|gif)/i,
+        dependency: { not: ['url'] },
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           {
@@ -122,9 +131,6 @@ module.exports = {
         }),
       ],
     }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false,
-    }),
+    // new BundleAnalyzerPlugin(),
   ],
 };

@@ -1,3 +1,5 @@
+import logo from '../../public/images/logo.png';
+
 class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -8,7 +10,7 @@ class AppBar extends HTMLElement {
       <nav id="navbar">
         <div class="bar-container">
           <a class="logo" href="">
-            <img src="/images/logo.png" alt="logo"/>
+            <img src="${logo}" alt="logo"/>
             <p>Hunger Apps</p>
           </a>
           <ul class="nav-desktop">

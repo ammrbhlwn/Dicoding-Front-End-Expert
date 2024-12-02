@@ -38,8 +38,6 @@ const Detail = {
     document
       .querySelector('.add-review-container')
       .addEventListener('submit', (event) => {
-        event.preventDefault();
-
         const name = event.target.querySelector('.input-name').value;
         const review = event.target.querySelector('.input-review').value;
 

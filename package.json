@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --port 8255",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --port 8258",
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist --port 9000",
     "test": "jest",
@@ -31,6 +31,7 @@
     "eslint": "^8.57.1",
     "eslint-config-dicodingacademy": "^0.9.4",
     "fake-indexeddb": "^4.0.2",
+    "file-loader": "^6.2.0",
     "globals": "^15.12.0",
     "html-webpack-plugin": "^5.6.3",
     "http-server": "^14.1.1",

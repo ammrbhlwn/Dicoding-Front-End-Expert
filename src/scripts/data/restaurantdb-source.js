@@ -14,7 +14,6 @@ class RestaurantDbSource {
       }
 
       const responseJson = await response.json();
-      console.log(responseJson);
       return responseJson.restaurants;
     } catch (error) {
       pageNotFound('Please check your network!');
@@ -35,7 +34,6 @@ class RestaurantDbSource {
       }
 
       const responseJson = await response.json();
-      console.log(responseJson);
       return responseJson.restaurant;
     } catch (error) {
       return pageNotFound('An unexpected error occurred');

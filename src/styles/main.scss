@@ -78,13 +78,19 @@ header {
   gap: 2rem;
 }
 
-.nav-desktop > li a {
-  min-width: 44px;
+.nav-desktop li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 44px;
-  font-family: Poppins;
-  font-size: 2.5rem;
-  text-decoration: none;
+  min-width: 44px;
+}
+
+.nav-desktop > li a {
   padding-block: 1rem;
+  font-family: Poppins;
+  font-size: 3rem;
+  text-decoration: none;
   color: black;
   transition: color 0.3s;
 }
@@ -121,6 +127,11 @@ header {
   flex-direction: column;
   gap: 2rem;
   list-style-type: none;
+}
+
+#drawer .nav-mobile li {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 #drawer > .nav-mobile > li a {
