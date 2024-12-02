@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   module: {
@@ -70,7 +70,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public'),
-          to: path.resolve(__dirname, 'public'),
+          to: path.resolve(__dirname, 'dist'),
           globOptions: {
             ignore: ['**/images/**'],
           },
