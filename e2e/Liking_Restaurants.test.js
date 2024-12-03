@@ -119,8 +119,8 @@ Scenario('Add Review', async ({ I }) => {
   I.waitForElement('.add-review-container', 5);
   I.seeElement('.add-review-container');
 
-  const inputTextReview = 'Makanannya sangat enak!';
-  const outputTextReview = 'Makanannya sangat enak!';
+  const inputTextReview = 'baik';
+  const outputTextReview = 'baik';
   I.fillField('input', 'Dicoding');
   I.fillField('textarea', inputTextReview);
 

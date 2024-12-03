@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 import CONFIG from '../../globals/config.js';
-import imgPlaceholder from '../../../public/images/placeholder.png';
 
 const medium = 'medium/';
 const small = 'small/';
@@ -12,7 +11,7 @@ const createSkeletonRestaurantListTemplate = (count) => {
     template += `
         <div class="resto-item">
           <picture>
-            <img class="resto_item_picture lazyload" src="${imgPlaceholder}" alt="skeleton">
+            <img class="resto_item_picture lazyload" src="/images/placeholder.png" alt="skeleton">
           </picture>
           
           <div class="text-container">
@@ -35,7 +34,7 @@ const createSkeletonRestaurantDetailTemplate = () => {
   template += `
       <div class="resto_detail_picture">
         <picture>
-          <img class="resto_item_picture lazyload" src="${imgPlaceholder}" alt="skeleton">
+          <img class="resto_item_picture lazyload" src="/images/placeholder.png" alt="skeleton">
         </picture>
       </div>
       <div class="text-container">
@@ -56,9 +55,9 @@ const createRestaurantListTemplate = (restaurant) => `
         <source class="lazyload" media="(max-width: 600px)" srcset="${
           CONFIG.BASE_IMAGE_URL + small + restaurant.pictureId
         }">
-        <img class="resto_item_picture lazyload" src="${imgPlaceholder}" data-src="${
-  CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId
-}" alt="Restoran ${restaurant.name || '-'}">
+        <img class="resto_item_picture lazyload" src="/images/placeholder.png" data-src="${
+          CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId
+        }" alt="Restoran ${restaurant.name || '-'}">
       </picture>
       
       <div class="text-container">
@@ -81,9 +80,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
           <source class="lazyload" media="(max-width: 600px)" srcset="${
             CONFIG.BASE_IMAGE_URL + small + restaurant.pictureId
           }">
-          <img class="resto_item_picture lazyload" src="${imgPlaceholder}" data-src="${
-  CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId
-}" alt="Restoran ${restaurant.name || '-'}">
+          <img class="resto_item_picture lazyload" src="/images/placeholder.png" data-src="${
+            CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId
+          }" alt="Restoran ${restaurant.name || '-'}">
         </picture>
       </div>
       <div class="text-container" tabindex="0">
