@@ -51,7 +51,7 @@ const createSkeletonRestaurantDetailTemplate = () => {
 
 const createRestaurantListTemplate = (restaurant) => `
     <div id="${restaurant.id}" class="resto-item" tabindex="0">
-      <picture>
+      <picture class="lazyload">
         <source class="lazyload" media="(max-width: 600px)" srcset="${
           CONFIG.BASE_IMAGE_URL + small + restaurant.pictureId
         }">
@@ -76,7 +76,7 @@ const createRestaurantListTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
       <div class="resto_detail_picture" tabindex="0">
-        <picture>
+        <picture class="lazyload">
           <source class="lazyload" media="(max-width: 600px)" srcset="${
             CONFIG.BASE_IMAGE_URL + small + restaurant.pictureId
           }">

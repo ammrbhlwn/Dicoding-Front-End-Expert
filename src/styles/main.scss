@@ -87,6 +87,8 @@ header {
 }
 
 .nav-desktop > li a {
+  min-height: 44px;
+  min-width: 44px;
   padding-block: 1rem;
   font-family: Poppins;
   font-size: 3rem;
